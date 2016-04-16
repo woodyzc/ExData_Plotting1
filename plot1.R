@@ -6,7 +6,7 @@ allData<- tbl_df(allData)
 # change Date and Time into character, then filter out data from 2007-02-01 and 2007-02-02.
 # create a new column contains both Date and Time.
 allData<- mutate(allData,Date=as.character(Date),Time=as.character(Time))
-Data2007<- filter(new,Date%in% c('1/2/2007','2/2/2007'))
+Data2007<- filter(allData,Date%in% c('1/2/2007','2/2/2007'))
 Data2007<- mutate(Data2007,DT=(paste(Date,Time)))
 
 #save the plot to png
