@@ -9,7 +9,8 @@ allData<- mutate(allData,Date=as.character(Date),Time=as.character(Time))
 Data2007<- filter(allData,Date%in% c('1/2/2007','2/2/2007'))
 Data2007<- mutate(Data2007,DT=(paste(Date,Time)))
 
-#save the plot to png
+#save the plot to png.
+#set the display area to be 2x2 for plot.
 png(file = "plot4.png", width = 480, height = 480, units = "px")
 par(mfrow=c(2,2))
 
